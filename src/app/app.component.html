@@ -9,11 +9,11 @@
       </button>
       <p *ngIf="showSecret">Secret Password: Tuna</p>
       <div
-        *ngFor="let i of log"
-        [ngStyle]="{backgroundColor: i >= 5 ? 'blue' : 'transparent'}"
-        [ngClass]="{'white-text': i >= 5}"
+        *ngFor="let item of log; let i = index"
+        [ngStyle]="{backgroundColor: i >= 4 ? 'blue' : 'transparent'}"
+        [ngClass]="{'white-text': i >= 4}"
       >
-        {{ i }}
+        {{ item }}
       </div>
     </div>
   </div>
